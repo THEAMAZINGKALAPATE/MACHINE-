@@ -1,0 +1,79 @@
+#include<iostream>
+#include<cmath>
+#include<math.h>
+
+using namespace std;
+
+int main()
+{
+    // declaration of main values
+    float a, b, c, x, y, z, h;
+    //declaration of values for formulae
+    float x1, y1, z1, h1;
+    //length inputs
+    cout<<"Please enter your side lengths"<<endl;
+    cout<<"Side a: "; cin>>a;
+    cout<<"Side b: "; cin>>b;
+    cout<<"Side c: "; cin>>c;
+    //Equilateral Case (All equilaterals are acute)
+    if(a==b && a==c && b==c && x<90 && y<90 && z<90 && a>0 && b>0 && c>0)
+    {
+        x=60;
+        y=60;
+        z=60;
+        cout<<"Interior angles are "<<x<<", "<<y<<", "<<z<<endl;
+        cout<<"This triangle is an equilateral triangle"<<endl;
+        cout<<"This triangle is an acute triangle"<<endl;
+    }
+    // Next 3 conditions are for isosceles
+    
+    // a and b are equal, x and y are equal
+    else if(a==b && a!=c && b!=c && a>0 && b>0 && c>0)
+    {
+        h = sqrt(pow(a, 2) - pow(c/2, 2));
+        x = acos(c / (2 * a));
+        y = x;
+        z1 = 1.5708 - x;
+        z = z1 * 2;
+        cout<<"Interior angles are "<<"x="<<x<<"π, "<<"y="<<y<<"π, "<<"z="<<z<<"π"<<endl;
+        cout<<"This triangle is an isosceles"<<endl;
+        cout<<"The apothem is: "<<h<<endl;
+    }
+    // a and c are the equal sides, y and z are equal
+    else if(a!=b && a==c && b!=c && a>0 && b>0 && c>0)
+    {
+        h = sqrt(pow(c, 2) - pow(b/2, 2));
+        z = acos(b / (2 * c));
+        y = z;
+        x1 = 1.5708 - y;
+        x = x1 * 2;
+        cout<<"Interior angles are "<<"x="<<x<<"π, "<<"y="<<y<<"π, "<<"z="<<z<<"π"<<endl;
+        cout<<"This triangle is an isosceles"<<endl;
+        cout<<"The apothem is: "<<h<<endl;
+    }
+    //b and c are equal, x and z are equal
+    else if(a!=b && a!=c && b==c && a>0 && b>0 && c>0)
+    {
+        h = sqrt(pow(b, 2) - pow(a/2, 2));
+        z = acos(a /(2 * b));
+        x = z;
+        y1 = 1.5708 - x;
+        y = y1 * 2;
+        cout<<"Interior angles are "<<"x="<<x<<"π, "<<"y="<<y<<"π, "<<"z="<<z<<"π"<<endl;
+        cout<<"This triangle is an isosceles"<<endl;
+        cout<<"The apothem is: "<< h <<endl;
+    }
+    
+    else if(a!=b && a!=c && b!=c && a>0 && b>0 && c>0)
+    {
+        cout<<"This triangle is a scalene triangle"<<endl;
+        cout<<"Apothem cannot be computed"<<endl;
+        
+    }
+    else
+    {
+        cout<<"You have made invalid inputs"<<endl;
+    }
+    
+    return 0;
+}
