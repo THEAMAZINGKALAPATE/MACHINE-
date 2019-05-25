@@ -1,0 +1,371 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	//THE SUPREME RACE!
+	string names[50];
+	int x;
+	int y;
+	int z;
+    int quiza[50];
+    int quizb[50];
+    int quizc[50];
+    int quizd[50];
+    int exama[50];
+    int examb[50];
+    int notebook[50];
+    float notebookper[50];
+    int swa[50];
+    int swb[50];
+    int swc[50];
+    int swd[50];
+    int swe[50];
+    int swf[50];
+    int swg[50];
+    int swh[50];
+    int swi[50];
+    int swj[50];
+    float bw[50];
+    float bwa[50];
+    float bwb[50];
+    int sumq[50];
+    float quizper[50];
+    int sume[50];
+    float examper[50];
+    int sumsw[50];
+    float swper[50];
+    float percentage[50];
+    char arr[50];
+    float temp;
+    
+    //1000 LINES OF INPUT
+    cout<<"-=-=- EXCEL GRADESHEET 9000 -=-=-\n\n";
+    cout<<"This program will show the raw grade and their corresponding GPA of fifty (50) students.\nThis program will also show if they have passed or failed the subject.\nThis program will also show the top ten (10) students in class!\n\n";
+    cout<<"Enter the names of your student!\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": ";
+        getline(cin, names[x]);
+    }
+    cout<<"Enter their grades for Quiz 1!(Out of 100)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> quiza[x];
+        if (quiza[x]>100 || quiza[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Enter their grades for Quiz 2!(Out of 100)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> quizb[x];
+        if (quizb[x]>100 || quizb[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Enter their grades for Quiz 3!(Out of 100)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> quizc[x];
+        if (quizc[x]>100 || quizc[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Enter their grades for Quiz 4!(Out of 100)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> quizd[x];
+        if (quizd[x]>100 || quizd[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Enter Preliminary Exam Grade!(Out of 100)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> exama[x];
+        if (exama[x]>100 || exama[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Enter Final Exam Grade!(Out of 100)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> examb[x];
+        if (examb[x]>100 || examb[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    
+    cout<<"\nClass Standing\n\n";
+    cout<<"Enter their Notebook Grade!(Out of 100)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> notebook[x];
+        if (notebook[x]>100 || notebook[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Seatwork 1 Grades(Out of 10)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> swa[x];
+        if (swa[x]>10 || swa[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Seatwork 2 Grades(Out of 10)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> swb[x];
+        if (swb[x]>10 || swb[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Seatwork 3 Grades(Out of 10)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> swc[x];
+        if (swc[x]>10 || swc[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Seatwork 4 Grades(Out of 10)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> swd[x];
+        if (swd[x]>10 || swd[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Seatwork 5 Grades(Out of 10)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> swe[x];
+        if (swe[x]>10 || swe[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Seatwork 6 Grades(Out of 10)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> swf[x];
+        if (swf[x]>10 || swf[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Seatwork 7 Grades(Out of 10)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> swg[x];
+        if (swg[x]>10 || swg[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Seatwork 8 Grades(Out of 10)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> swh[x];
+        if (swh[x]>10 || swh[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Seatwork 9 Grades(Out of 10)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> swi[x];
+        if (swi[x]>10 || swi[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Seatwork 10 Grades(Out of 10)\n";
+    for (x = 0; x < 50; x++)
+    {
+        cout << x + 1<<": "<<names[x]<<": \t\t";
+        cin >> swj[x];
+        if (swj[x]>10 || swj[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+    }
+    cout<<"Boardwork! Amount of their recitation in class!\n";
+    for (x = 0; x < 50; x++)
+	{
+		cout << x + 1<<": "<<names[x]<<": \t\t";
+		cin>>bw[x];
+		if (bw[x]<0)
+        {
+        	cout<<"Invalid Input!";
+        	return 0;
+		}
+	}
+	//GRID GRADES (NOT RECOMMENDED)
+    /*for (x = 0; x < 50; x++)
+    {
+        cout<<names[x]<<": \t\t\t"<< quiza[x]<<" "<< quizb[x]<<" "<< quizc[x]<<" "<< quizd[x]<<" "<< exama[x]<<" "<< examb[x]<<" "<< notebook[x]<<" "<< swa[x]<<" "<< swb[x]<<" "<< swc[x]<<" "<< swd[x]<<" "<< swe[x]<<" "<< swf[x]<<" "<< swg[x]<<" "<< swh[x]<<" "<< swi[x]<<" "<< swj[x]<<" "<< bw[x]<<"\n";     //delete after
+    }*/
+    
+    //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- CREATED BY: MARC ANTHONY C. UMITEN -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    //EPIC TRANSITION HERE!
+    //MASTER CALCULATIONS HERE!
+    
+    //QUIZZES PERCENTAGE (60%)
+    for (x = 0; x < 50; x++)
+    {
+    	sumq[x] = quiza[x] + quizb[x] + quizc[x] + quizd[x];
+    	quizper[x] = sumq[x]*0.15;
+    	//cout<<"Percentage of student "<< x + 1 <<" quizzes!: "<< quizper[x] <<"\n";
+    }
+    //EXAMS PERCENTAGE (40%)
+    for (x = 0; x < 50; x++)
+    {
+    	sume[x] = exama[x] + examb[x];
+    	examper[x] = sume[x]*0.2;
+    	//cout<<"Percentage of student "<< x + 1 <<" exam!: "<< examper[x] <<"\n";
+    }
+    //NOTEBOOKS (1%)
+    for (x = 0; x < 50; x++)
+    {
+    	notebookper[x] = notebook[x]*0.01;
+    	//cout<<"Percentage of student "<< x + 1 <<" notebook!: "<< notebookper[x] <<"\n";
+    }
+    //SEATWORKS (2%)
+    for (x = 0; x < 50; x++)
+    {
+    	sumsw[x] = swa[x] + swb[x] + swc[x] + swd[x] + swe[x] + swf[x] + swg[x] + swh[x] + swi[x] + swj[x];
+    	swper[x] = sumsw[x]*0.02;
+    	//cout<<"Percentage of student "<< x + 1 <<" seatwork!: "<< swper[x] <<"\n";
+    }
+    //BOARDWORKS (2%)
+    y = 0;
+    for (x = 1; x < 50; x++)
+	{
+		if(bw[y] < bw[x])
+		y = x;
+	}
+	z = bw[y];
+	
+    for (x = 0; x < 50; x++)
+    {
+    	if(bw[x] != z)
+    	{
+    		bwa[x] = bw[x]/z;
+			bwb[x] = bwa[x]*2;
+			//cout<<"Percentage of "<< names[x] <<": "<< bwb[x] <<"\n";
+		}
+    	else
+    	{
+			bwb[x] = 2;
+			//cout<<"Percentage of "<< names[x] <<": "<< bwb[x] <<"\n";
+		}
+    }
+    //SUPREME PERCENTAGE
+    for (x = 0; x < 50; x++)
+    {
+    	percentage[x] = bwb[x] + swper[x] + notebookper[x] + examper[x] + quizper[x];
+    	cout<<"Raw Grade of "<< names[x] <<": "<< percentage[x] <<"\n";
+	}
+    //FINAL GRADE TRANFORMATION
+    for (x = 0; x < 50; x++)
+    {
+    	if(percentage[x]>=95.57 && 105>=percentage[x])
+    		cout<<"GPA of "<< names[x] <<"= "<< 1.00 <<"\n";
+    	if(percentage[x]>=91.12 && 95.56>=percentage[x])
+    		cout<<"GAP of "<< names[x] <<"= "<< 1.25 <<"\n";
+    	if(percentage[x]>=86.68 && 91.11>=percentage[x])
+    		cout<<"GPA of "<< names[x] <<"= "<< 1.50 <<"\n";
+    	if(percentage[x]>=82.23 && 86.67>=percentage[x])
+    		cout<<"GPA of "<< names[x] <<"= "<< 1.75 <<"\n";
+    	if(percentage[x]>=77.79 && 82.22>=percentage[x])
+    		cout<<"GPA of "<< names[x] <<"= "<< 2.00 <<"\n";
+    	if(percentage[x]>=73.34 && 77.78>=percentage[x])
+    		cout<<"GPA of "<< names[x] <<"= "<< 2.25 <<"\n";
+    	if(percentage[x]>=68.90 && 73.33>=percentage[x])
+    		cout<<"GAP of "<< names[x] <<"= "<< 2.50 <<"\n";
+    	if(percentage[x]>=64.45 && 68.89>=percentage[x])
+    		cout<<"GPA of "<< names[x] <<"= "<< 2.75 <<"\n";
+    	if(percentage[x]>=60.00 && 64.44>=percentage[x])
+    		cout<<"GPA of "<< names[x] <<"= "<< 3.00 <<"\n";
+    	if(percentage[x]<60.00)
+    		cout<<"GPA of "<< names[x] <<"= "<< 5.00 <<"\n";
+	}
+	//JUDGEMENT
+	for (x = 0; x < 50; x++)
+	{
+		if(percentage[x]>=60.00)
+			cout << x + 1<<": "<< names[x] <<": PASSED!\n";
+		if(percentage[x]<60.00)
+			cout << x + 1<<": "<< names[x] <<": FAILED!\n";
+	}
+    //SUPREME 10
+    for (x = 0; x < 50; x++)
+	{		
+		for(y = x+1; y < 50; y++)
+		{
+			if(percentage[x]<percentage[y])
+			{
+				temp  =percentage[x];
+				percentage[x]=percentage[y];
+				percentage[y]=temp;
+			}
+		}
+	}
+    cout<<"\n\nTop 10: \n";
+	for (x = 0; x < 10; x++)
+		cout<< names[x] <<": "<< percentage[x]<<"\n";
+    
+    
+    cout<<"\nPROGRAM END!\nTHANK YOU FOR USING OUR EXCEL GRADESHEET 9000!\nLEADER: JACOB EBILANE\nDEVELOPER: MARC UMITEN\nCHECKER: LIPA BRIXIUS\nALL RIGHTS RESERVERD 2019";
+    return 0;
+}
